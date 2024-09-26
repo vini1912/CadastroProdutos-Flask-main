@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebProdutos</title>
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Cadastro de Produtos</a> | 
+        <a href="/consulta"> Consultar Produtos</a>
+    </nav>
+    <div class="cad_produtos">
+        <form action="/validar_produto" method="post" class="cad_produtos_formulario">
+            <h2>Cadastro de Produtos</h2>
+            <label for="">Nome do Produto:</label>
+            <input type="text" name="nome_produto" id="nome_produto"> <br>
+
+            <label for="">Valor do Produto:</label>
+            <input type="text" name="valor_produto" id="valor_produto"> <br>
+
+            <label for="">Quantidade do Produto:</label>
+            <input type="text" name="quantidade_produto" id="quantidade_produto"> <br>
+
+            <div>
+                <button type="submit" class="cad_produtos_enviar">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

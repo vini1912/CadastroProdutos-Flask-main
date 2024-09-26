@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Produtos</title>
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Cadastro de Produtos</a> | 
+        <a href="/consulta"> Consultar Produtos</a>
+    </nav>
+    
+    <div class="consulta_produtos">
+        <h2>Consulta de Produtos</h2>
+        <table class="consulta_produtos_tabela">
+            <thead>
+                <tr>
+                    <th>Nome do Produto</th>
+                    <th>Valor do Produto</th>
+                    <th>Quantidade</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produto in produtos %}
+                <tr>
+                    <td>{{ produto.nome }}</td>
+                    <td>{{ produto.valor }}</td>
+                    <td>{{ produto.quantidade }}</td>
+                    <td><a href="/excluir_produto?linha={{ produto.linha }}" class="link_produto">Deletar Produto</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
